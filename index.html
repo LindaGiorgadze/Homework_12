@@ -4,9 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Document</title>
+    <title>Homework_12</title>
 </head>
 <body>
-    
+    <header>
+		<nav class="header-nav">
+			<a href="index.html"><img class="logo" src="images/logo.svg" alt="HowTo"></a>
+			<div class="menu-search">
+				<ul class="menu">
+					<li><a href="#">პროექტის შესახებ</a></li>
+					<li><a href="#">მოთხოვნები</a></li>
+					<li><a href="#">EXPLORE</a></li>
+					<li><a href="#">შესვლა</a></li>
+				</ul>
+				<button class="burger"><img src="images/burger.png"></button>
+				<div class="search-div">
+					<input type="search" name="search" id="search" class="search-input">
+					<img class="search-icon" src="images/search.svg" alt="Search">
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="slider">
+			<img class="slides" src="images/recent2.jpg" alt="Slide Image">
+			<img class="slides" src="images/slide2.jpg" alt="Slide Image">
+			<img class="slides" src="images/slide3.jpg" alt="Slide Image">
+			<button class="slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="slide-button-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+  			showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("slides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";  
+			  	}
+			  	x[slideIndex-1].style.display = "block"
+				}
+		</script>
+		<div class="popular">
+			<h2 class="div-title" >პოპულარული სტატიები</h2>
+			<div class="articles">
+				<article class="article-popular">
+					<img src="images/recent1.jpg" alt="Image">
+					<h3 class="article-title">სტატიის სათაური</h3>
+					<p class="article-text">ამ სტატიასაც სჭირდება აღწერა, ამიტომ ეს ველი დაეთმობა ამ სტატიის მოკლე აღწერას</p>
+					<a class="more" href="#">more</a>
+				</article>
+				<article class="article-popular">
+					<img src="images/recent2.jpg" alt="Image">
+					<h3 class="article-title">სტატიის სათაური</h3>
+					<p class="article-text">ამ სტატიასაც სჭირდება აღწერა, ამიტომ ეს ველი დაეთმობა ამ სტატიის მოკლე აღწერას</p>
+					<a class="more" href="#">more</a>
+				</article>
+				<article class="article-popular">
+					<img src="images/recent3.jpg" alt="Image">
+					<h3 class="article-title">სტატიის სათაური</h3>
+					<p class="article-text">ამ სტატიასაც სჭირდება აღწერა, ამიტომ ეს ველი დაეთმობა ამ სტატიის მოკლე აღწერას</p>
+					<a class="more" href="#">more</a>
+				</article>
+			</div>
+			<a class="load-more" href="#">Load more</a>
+		</div>
+		<div class="recent">
+			<h2 class="div-title">ბოლოს დამატებული</h2>
+			<div class="articles">
+				<article class="article-recent">
+					<img src="images/popular1.jpg" alt="Image">
+					<h3 class="article-title">სტატიის სათაური</h3>
+					<p class="article-text">ამ სტატიასაც სჭირდება აღწერა, ამიტომ ეს ველი დაეთმობა ამ სტატიის მოკლე აღწერას</p>
+					<a class="more" href="#">more</a>
+				</article>
+				<article class="article-recent">
+					<img src="images/popular2.jpg" alt="Image">
+					<h3 class="article-title">სტატიის სათაური</h3>
+					<p class="article-text">ამ სტატიასაც სჭირდება აღწერა, ამიტომ ეს ველი დაეთმობა ამ სტატიის მოკლე აღწერას</p>
+					<a class="more" href="#">more</a>
+				</article>
+				<article class="article-recent">
+					<img src="images/popular3.jpg" alt="Image">
+					<h3 class="article-title">სტატიის სათაური</h3>
+					<p class="article-text">ამ სტატიასაც სჭირდება აღწერა, ამიტომ ეს ველი დაეთმობა ამ სტატიის მოკლე აღწერას</p>
+					<a class="more" href="#">more</a>
+				</article>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<nav class="footer-nav">
+			<a href="index.html"><img class="footer-logo" src="images/logo.svg" alt="HowTo"></a>
+			<div class="contact">
+				<div class="virtual-contact">
+					<h4 class="contact-title">კონტაქტი</h4>
+					<p>+995 0322 38 08 02</p>
+					<p>info@lucapolare.com.svg</p>
+				</div>
+				<div class="physical-contact">
+					<h4 class="contact-title">მისამართი</h4>
+					<p>მერაბ ალექსიძის ქუჩა 10. თბილისი</p>
+				</div>
+			</div>
+			<ul class="social-icons">
+				<li>
+					<a href="https://www.facebook.com/"><img src="images/fb.svg" alt="Facebook"></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="Facebook"></a>
+				</li>
+			</ul>
+		</nav>
+
+	</footer>
 </body>
 </html>
