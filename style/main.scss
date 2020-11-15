@@ -48,36 +48,67 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
          url('../fonts/archyedt-thin-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/archyedt-thin-webfont.svg#archyedt-thinregular') format('svg'); /* Legacy iOS */
 }
+@font-face {
+    font-family: 'ITC Zapf Dingbats';
+    src: url('../fonts/ZapfDingbatsITCbyBT-Regular.eot');
+    src: url('../fonts/ZapfDingbatsITCbyBT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ZapfDingbatsITCbyBT-Regular.woff2') format('woff2'),
+        url('../fonts/ZapfDingbatsITCbyBT-Regular.woff') format('woff'),
+        url('../fonts/ZapfDingbatsITCbyBT-Regular.ttf') format('truetype'),
+        url('../fonts/ZapfDingbatsITCbyBT-Regular.svg#ZapfDingbatsITCbyBT-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 // style SCSS
 
 // Variables
 $color1: rgb(241, 241, 241);
 $color2: #2E2E2E;
+$color3: rgba(238, 236, 236, 0.774);
+$color4: #88888838;
 
 $display1: flex;
 $display2: inline-block;
 $display3: none;
 
-$title-size: 20px;
+// Sizes
+$padding01: 15px 0;
+$padding02: 20px 0;
+
+$box-size: 300px;
+
+// Font sizes
+$title-size: 25px;
+$title-size2: 16px;
+$title-size3: 13px;
 
 // Private Classes
 %container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px 10px;
 }
 %flex {
     display: $display1;
     align-items: center;
     justify-content: space-between;
 }
+%flex-column {
+    display: flex;
+    flex-flow: column;
+}
 %inline-block {
     display: $display2;
 }
 %text {
     font-family: "ArchyEDT-Thin", sans-serif;
+    color: #707070;
+}
+%text2 {
+    font-family: 'ITC Zapf Dingbats';
     color: #707070;
 }
 %fixed {
@@ -90,6 +121,7 @@ $title-size: 20px;
 header {
     @extend %flex;
     @extend %fixed;
+    z-index: 99;
     background-color: $color1;
     padding: 10px 0;
     .header-nav {
@@ -106,7 +138,8 @@ header {
         .menu-search {
             @extend %flex;
             display: $display1;
-            .menu {
+            ul {
+                margin: 0 30px 0 0;
                 li {
                     a {
                         @extend %text;
@@ -154,15 +187,133 @@ header {
 
 .container {
     @extend %container;
+    margin-top: 100px;
+    .slider {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        img {
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slide-button-left {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 5px;
+            transform: translate(0, -50%);
+            border: 0px solid transparent;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px 15px;
+        }
+        .slide-button-right {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            right: 5px;
+            transform: translate(0, -50%);
+            border: 0px solid transparent;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px 15px;
+        }
+    }
+    .popular {
+        @extend %flex-column;
+        margin-top: 60px;
+        .div-title {
+            @extend %text;
+            font-size: $title-size;
+            padding: $padding01;
+        }
+        .articles {
+            @extend %flex;
+            article {
+                @extend %flex-column;
+                border: 1px solid $color3;
+                box-shadow: 2px 5px $color4;
+                img {
+                    max-height: 150px;
+                    max-width: $box-size;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                h3 {
+                    @extend %text;
+                    font-size: $title-size2;
+                    padding: $padding01;
+                }
+                p {
+                    @extend %text2;
+                    font-size: $title-size3;
+                    max-width: $box-size;
+                }
+                a {
+                    align-self: flex-end;
+                    padding: $padding02;
+                }
+            }
+        }
+        .load-more {
+            padding: $padding02;
+            align-self: center;
+        }
+
+    }
+    .recent {
+        @extend %flex-column;
+        margin-top: 40px;
+        .div-title {
+            @extend %text;
+            font-size: $title-size;
+            padding: $padding01;
+        }
+        .articles {
+            @extend %flex;
+            article {
+                @extend %flex-column;
+                border: 1px solid $color3;
+                box-shadow: 2px 5px $color4;
+                img {
+                    max-height: 150px;
+                    max-width: $box-size;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                h3 {
+                    @extend %text;
+                    font-size: $title-size2;
+                    padding: $padding01;
+                }
+                p {
+                    @extend %text2;
+                    font-size: $title-size3;
+                    max-width: $box-size;
+                }
+                a {
+                    align-self: flex-end;
+                    padding: $padding02;
+                }
+            }
+        }
+    }
+
 }
 footer {
     @extend %flex;
     background-color: $color2;
+    margin-top: 50px;
     .footer-nav {
         @extend %container;
+        @extend %flex;
     }
 }
 
 img {
-    max-width: 500px;
+    width: 100%;
 }
