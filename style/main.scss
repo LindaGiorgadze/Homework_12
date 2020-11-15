@@ -68,6 +68,8 @@ $color1: rgb(241, 241, 241);
 $color2: #2E2E2E;
 $color3: rgba(238, 236, 236, 0.774);
 $color4: #88888838;
+$color5: #FFFFFF;
+$color6:  #707070;
 
 $display1: flex;
 $display2: inline-block;
@@ -105,11 +107,11 @@ $title-size3: 13px;
 }
 %text {
     font-family: "ArchyEDT-Thin", sans-serif;
-    color: #707070;
+    color: $color6;
 }
 %text2 {
     font-family: 'ITC Zapf Dingbats';
-    color: #707070;
+    color: $color6;
 }
 %fixed {
     position: fixed;
@@ -117,6 +119,13 @@ $title-size3: 13px;
     top: 0;
     left: 0;
 }
+
+// Mixins
+@mixin color-size ($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
 
 header {
     @extend %flex;
@@ -311,9 +320,46 @@ footer {
     .footer-nav {
         @extend %container;
         @extend %flex;
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .contact {
+            display: contents;
+            @include color-size ($color5, 16px);
+            h4 {
+                padding: $padding01;
+            }
+            .virtual-contact {
+                align-self: flex-start;
+                a {
+                    display: block;
+                    color: $color5;
+                }
+            }
+            .physical-contact {
+                align-self: flex-start;
+            }
+        }
+        .social-icons {
+            @extend %flex;
+            li {
+                padding-left: 10px;
+                a {
+                    img {
+                        max-width: 44px;
+                        max-height: 44px;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+                
+            }
+            
+        }
     }
-}
-
-img {
-    width: 100%;
 }

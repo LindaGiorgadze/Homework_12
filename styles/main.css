@@ -55,7 +55,7 @@ header .header-nav, .container, footer .footer-nav {
   margin: 0 auto;
   padding: 15px 10px; }
 
-header, header .header-nav, header .header-nav .menu-search, header .header-nav .menu-search .search-div, .container .popular .articles, .container .recent .articles, footer, footer .footer-nav {
+header, header .header-nav, header .header-nav .menu-search, header .header-nav .menu-search .search-div, .container .popular .articles, .container .recent .articles, footer, footer .footer-nav, footer .footer-nav .social-icons {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -206,6 +206,29 @@ header {
 footer {
   background-color: #2E2E2E;
   margin-top: 50px; }
-
-img {
-  width: 100%; }
+  footer .footer-nav .footer-logo {
+    width: 60px;
+    height: 60px; }
+    footer .footer-nav .footer-logo img {
+      width: 100%;
+      object-fit: contain; }
+  footer .footer-nav .contact {
+    display: contents;
+    color: #FFFFFF;
+    font-size: 16px; }
+    footer .footer-nav .contact h4 {
+      padding: 15px 0; }
+    footer .footer-nav .contact .virtual-contact {
+      align-self: flex-start; }
+      footer .footer-nav .contact .virtual-contact a {
+        display: block;
+        color: #FFFFFF; }
+    footer .footer-nav .contact .physical-contact {
+      align-self: flex-start; }
+  footer .footer-nav .social-icons li {
+    padding-left: 10px; }
+    footer .footer-nav .social-icons li a img {
+      max-width: 44px;
+      max-height: 44px;
+      width: 100%;
+      object-fit: contain; }
