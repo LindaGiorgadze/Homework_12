@@ -1,0 +1,167 @@
+// reset SCSS
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+  
+  /* HTML5 display-role reset for older browsers */
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+  
+  body {
+    line-height: 1; }
+  
+  ol, ul {
+    list-style: none; }
+  
+  blockquote, q {
+    quotes: none; }
+  
+  blockquote {
+    &:before, &:after {
+      content: '';
+      content: none; } }
+  
+  q {
+    &:before, &:after {
+      content: '';
+      content: none; } }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  a {
+      text-decoration: none;
+  }  
+
+// Fonts
+@font-face {
+    font-family: 'ArchyEDT-Thin';
+    src: url('../fonts/archyedt-thin-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/archyedt-thin-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/archyedt-thin-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/archyedt-thin-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/archyedt-thin-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/archyedt-thin-webfont.svg#archyedt-thinregular') format('svg'); /* Legacy iOS */
+}
+
+// style SCSS
+
+// Variables
+$color1: rgb(241, 241, 241);
+$color2: #2E2E2E;
+
+$display1: flex;
+$display2: inline-block;
+$display3: none;
+
+$title-size: 20px;
+
+// Private Classes
+%container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+%flex {
+    display: $display1;
+    align-items: center;
+    justify-content: space-between;
+}
+%inline-block {
+    display: $display2;
+}
+%text {
+    font-family: "ArchyEDT-Thin", sans-serif;
+    color: #707070;
+}
+%fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header {
+    @extend %flex;
+    @extend %fixed;
+    background-color: $color1;
+    padding: 10px 0;
+    .header-nav {
+        @extend %container;
+        @extend %flex;
+        .logo {
+            margin: 0 300px 0 0;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .menu-search {
+            @extend %flex;
+            display: $display1;
+            .menu {
+                li {
+                    a {
+                        @extend %text;
+                        font-size: $title-size;
+                    }
+                    display: $display2;
+                    margin: 0 13px;
+                }
+            }
+            .burger {
+                display: $display3;
+                width: 60px;
+                height: 60px;
+                padding: 0 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                };
+            }
+            .search-div{
+                @extend %flex;
+                padding: 0 5px;
+                .search-input {
+                    display: $display3;
+                    border-radius: 20% 20%;
+                    border-color: $color1;
+                    max-width: 140px;
+                }
+                .search-icon {
+                    padding: 0 0;
+                    background-color: transparent;
+                    border: 0px solid transparent;
+                    width: 26px;
+                    height: 26px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.container {
+    @extend %container;
+}
+footer {
+    @extend %flex;
+    background-color: $color2;
+    .footer-nav {
+        @extend %container;
+    }
+}
+
+img {
+    max-width: 500px;
+}

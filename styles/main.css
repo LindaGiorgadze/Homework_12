@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'ArchyEDT-Thin';
+  src: url("../fonts/archyedt-thin-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/archyedt-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/archyedt-thin-webfont.woff2") format("woff2"), url("../fonts/archyedt-thin-webfont.woff") format("woff"), url("../fonts/archyedt-thin-webfont.ttf") format("truetype"), url("../fonts/archyedt-thin-webfont.svg#archyedt-thinregular") format("svg");
+  /* Legacy iOS */ }
+
+header .header-nav, .container, footer .footer-nav {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px; }
+
+header, header .header-nav, header .header-nav .menu-search, header .header-nav .menu-search .search-div, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+header .header-nav .menu-search .menu li a {
+  font-family: "ArchyEDT-Thin", sans-serif;
+  color: #707070; }
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
+
+header {
+  background-color: #f1f1f1;
+  padding: 10px 0; }
+  header .header-nav .logo {
+    margin: 0 300px 0 0; }
+    header .header-nav .logo img {
+      width: 100%;
+      object-fit: contain; }
+  header .header-nav .menu-search {
+    display: flex; }
+    header .header-nav .menu-search .menu li {
+      display: inline-block;
+      margin: 0 13px; }
+      header .header-nav .menu-search .menu li a {
+        font-size: 20px; }
+    header .header-nav .menu-search .burger {
+      display: none;
+      width: 60px;
+      height: 60px;
+      padding: 0 0; }
+      header .header-nav .menu-search .burger img {
+        width: 100%;
+        height: 100%; }
+    header .header-nav .menu-search .search-div {
+      padding: 0 5px; }
+      header .header-nav .menu-search .search-div .search-input {
+        display: none;
+        border-radius: 20% 20%;
+        border-color: #f1f1f1;
+        max-width: 140px; }
+      header .header-nav .menu-search .search-div .search-icon {
+        padding: 0 0;
+        background-color: transparent;
+        border: 0px solid transparent;
+        width: 26px;
+        height: 26px; }
+        header .header-nav .menu-search .search-div .search-icon img {
+          width: 100%;
+          height: 100%; }
+
+footer {
+  background-color: #2E2E2E; }
+
+img {
+  max-width: 500px; }
