@@ -138,7 +138,7 @@ header {
         @extend %container;
         @extend %flex;
         @media (max-width: 420px) {
-            max-width: 395px;
+            max-width: 380px;
             width: 100%;
             margin: 0 auto;
             padding: 5px 3px;
@@ -217,7 +217,7 @@ header {
     @extend %container;
     margin-top: 100px;
     @media (max-width: 420px) {
-        max-width: 395px;
+        max-width: 380px;
         width: 100%;
         margin: 0 auto;
         padding: 5px 3px;
@@ -369,7 +369,7 @@ footer {
         @extend %container;
         @extend %flex;
         @media (max-width: 420px) {
-            max-width: 395px;
+            max-width: 380px;
             width: 100%;
             margin: 0 auto;
             padding: 5px 3px;
@@ -377,6 +377,10 @@ footer {
         .footer-logo {
             width: 60px;
             height: 60px;
+            @media (max-width: 420px) {
+                max-width: 48px;
+                max-height: 36px;
+            }
             img {
                 width: 100%;
                 object-fit: contain;
@@ -386,6 +390,9 @@ footer {
             display: contents;
             @extend %text;
             @include color-size ($color5, 16px);
+            @media (max-width: 420px) {
+                font-size: 8px;
+            }
             h4 {
                 padding: $padding01;
             }

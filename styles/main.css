@@ -84,7 +84,7 @@ header {
   padding: 10px 0; }
   @media (max-width: 420px) {
     header .header-nav {
-      max-width: 395px;
+      max-width: 380px;
       width: 100%;
       margin: 0 auto;
       padding: 5px 3px; } }
@@ -144,7 +144,7 @@ header {
   margin-top: 100px; }
   @media (max-width: 420px) {
     .container {
-      max-width: 395px;
+      max-width: 380px;
       width: 100%;
       margin: 0 auto;
       padding: 5px 3px;
@@ -254,13 +254,17 @@ footer {
   margin-top: 50px; }
   @media (max-width: 420px) {
     footer .footer-nav {
-      max-width: 395px;
+      max-width: 380px;
       width: 100%;
       margin: 0 auto;
       padding: 5px 3px; } }
   footer .footer-nav .footer-logo {
     width: 60px;
     height: 60px; }
+    @media (max-width: 420px) {
+      footer .footer-nav .footer-logo {
+        max-width: 48px;
+        max-height: 36px; } }
     footer .footer-nav .footer-logo img {
       width: 100%;
       object-fit: contain; }
@@ -268,6 +272,9 @@ footer {
     display: contents;
     color: #FFFFFF;
     font-size: 16px; }
+    @media (max-width: 420px) {
+      footer .footer-nav .contact {
+        font-size: 8px; } }
     footer .footer-nav .contact h4 {
       padding: 15px 0; }
     footer .footer-nav .contact .virtual-contact {
