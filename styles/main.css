@@ -64,13 +64,17 @@ header, header .header-nav, header .header-nav .menu-search, header .header-nav 
   display: flex;
   flex-flow: column; }
 
-header .header-nav .menu-search ul li a, .container .popular .div-title, .container .popular .articles article h3, .container .popular .articles article a, .container .popular .load-more, .container .recent .div-title, .container .recent .articles article h3, .container .recent .articles article a, footer .footer-nav .contact {
+header .header-nav .menu-search .menu li a, .container .popular .div-title, .container .popular .articles article h3, .container .popular .articles article a, .container .popular .load-more, .container .recent .div-title, .container .recent .articles article h3, .container .recent .articles article a, footer .footer-nav .contact {
   font-family: "ArchyEDT-Thin", sans-serif;
   color: #707070; }
 
 .container .popular .articles article p, .container .recent .articles article p {
   font-family: 'ITC Zapf Dingbats';
   color: #707070; }
+
+header .header-nav .menu-search .responsive-menu li a {
+  font-family: "ArchyEDT-Thin";
+  color: #FFFFFF; }
 
 header {
   position: fixed;
@@ -100,15 +104,15 @@ header {
       object-fit: contain; }
   header .header-nav .menu-search {
     display: flex; }
-    header .header-nav .menu-search ul {
+    header .header-nav .menu-search .menu {
       margin: 0 30px 0 0; }
       @media (max-width: 420px) {
-        header .header-nav .menu-search ul {
+        header .header-nav .menu-search .menu {
           display: none; } }
-      header .header-nav .menu-search ul li {
+      header .header-nav .menu-search .menu li {
         display: inline-block;
         margin: 0 13px; }
-        header .header-nav .menu-search ul li a {
+        header .header-nav .menu-search .menu li a {
           font-size: 25px; }
     header .header-nav .menu-search .burger {
       display: none;
@@ -123,6 +127,21 @@ header {
       header .header-nav .menu-search .burger img {
         width: 100%;
         height: 100%; }
+    header .header-nav .menu-search .responsive-menu {
+      display: none;
+      width: 100%;
+      position: fixed;
+      top: 67px;
+      left: 0;
+      background-color: #2e2e2ecc; }
+      @media (max-width: 420px) {
+        header .header-nav .menu-search .responsive-menu {
+          display: block; } }
+      header .header-nav .menu-search .responsive-menu li {
+        display: flex;
+        padding: 20px 0; }
+        header .header-nav .menu-search .responsive-menu li a {
+          font-size: 20px; }
     header .header-nav .menu-search .search-div {
       padding: 0 5px; }
       header .header-nav .menu-search .search-div .search-input {

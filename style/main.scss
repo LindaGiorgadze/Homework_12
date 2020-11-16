@@ -86,6 +86,7 @@ $box-size: 300px;
 $title-size: 25px;
 $title-size2: 16px;
 $title-size3: 13px;
+$responsive-menu-size: 20px;
 
 // Private Classes
 %container {
@@ -113,6 +114,10 @@ $title-size3: 13px;
 %text2 {
     font-family: 'ITC Zapf Dingbats';
     color: $color6;
+}
+%responsive-menu-text-color {
+    font-family: "ArchyEDT-Thin";
+    color: $color5;
 }
 %fixed {
     position: fixed;
@@ -158,7 +163,7 @@ header {
         .menu-search {
             @extend %flex;
             display: $display1;
-            ul {
+            .menu {
                 @media (max-width: 420px) {
                     display: $display3;
                 }
@@ -186,6 +191,25 @@ header {
                     width: 100%;
                     height: 100%;
                 };
+            }
+            .responsive-menu {
+                display: $display3;
+                @media (max-width: 420px) {
+                    display: $display4;
+                }
+                width: 100%;;
+                position: fixed;
+                top: 67px;
+                left: 0;
+                background-color: #2e2e2ecc;
+                li {
+                    display: $display1;
+                    padding: 20px 0;
+                    a {
+                        @extend %responsive-menu-text-color;
+                        font-size: $responsive-menu-size;
+                    }
+                }
             }
             .search-div{
                 @extend %flex;
