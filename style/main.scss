@@ -262,12 +262,15 @@ header {
                     max-width: $box-size;
                 }
                 a {
+                    @extend %text;
+                    @include color-size($color6, $title-size2);
                     align-self: flex-end;
                     padding: $padding02;
                 }
             }
         }
         .load-more {
+            @extend %text;
             padding: $padding02;
             align-self: center;
         }
@@ -305,6 +308,8 @@ header {
                     max-width: $box-size;
                 }
                 a {
+                    @extend %text;
+                    @include color-size($color6, $title-size2);
                     align-self: flex-end;
                     padding: $padding02;
                 }
@@ -352,10 +357,11 @@ footer {
                 padding-left: 10px;
                 a {
                     img {
-                        max-width: 44px;
-                        max-height: 44px;
+                        max-width: 33px;
+                        max-height: 33px;
                         width: 100%;
                         object-fit: contain;
+                        opacity: 60%;
                     }
                 }
                 

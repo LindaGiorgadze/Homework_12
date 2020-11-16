@@ -64,7 +64,7 @@ header, header .header-nav, header .header-nav .menu-search, header .header-nav 
   display: flex;
   flex-flow: column; }
 
-header .header-nav .menu-search ul li a, .container .popular .div-title, .container .popular .articles article h3, .container .recent .div-title, .container .recent .articles article h3, footer .footer-nav .contact {
+header .header-nav .menu-search ul li a, .container .popular .div-title, .container .popular .articles article h3, .container .popular .articles article a, .container .popular .load-more, .container .recent .div-title, .container .recent .articles article h3, .container .recent .articles article a, footer .footer-nav .contact {
   font-family: "ArchyEDT-Thin", sans-serif;
   color: #707070; }
 
@@ -174,6 +174,8 @@ header {
         font-size: 13px;
         max-width: 300px; }
       .container .popular .articles article a {
+        color: #707070;
+        font-size: 16px;
         align-self: flex-end;
         padding: 20px 0; }
     .container .popular .load-more {
@@ -200,6 +202,8 @@ header {
         font-size: 13px;
         max-width: 300px; }
       .container .recent .articles article a {
+        color: #707070;
+        font-size: 16px;
         align-self: flex-end;
         padding: 20px 0; }
 
@@ -228,7 +232,8 @@ footer {
   footer .footer-nav .social-icons li {
     padding-left: 10px; }
     footer .footer-nav .social-icons li a img {
-      max-width: 44px;
-      max-height: 44px;
+      max-width: 33px;
+      max-height: 33px;
       width: 100%;
-      object-fit: contain; }
+      object-fit: contain;
+      opacity: 60%; }
