@@ -330,6 +330,7 @@ footer {
         }
         .contact {
             display: contents;
+            @extend %text;
             @include color-size ($color5, 16px);
             h4 {
                 padding: $padding01;
